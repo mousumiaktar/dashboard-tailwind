@@ -8,11 +8,11 @@ const Navbar = () => {
     const handleNav = () => {
         setNav(!nav);
     };
-    
+
 
     return (
         <nav
-            className= "w-full top-0 font-poppins z-50 pl-5 pr-5 ease-in-out duration-1000 sticky md:bg-gray-900 bg-gray-900" 
+            className="w-full top-0 font-poppins z-50 pl-5 pr-5 ease-in-out duration-1000 sticky md:bg-gray-900 bg-gray-900"
         >
             <div className="container mx-auto h-full">
                 <div className="flex justify-between items-center w-full lg:px-8  z-50 nav-area left-0">
@@ -33,14 +33,18 @@ const Navbar = () => {
                     </ul>
 
                     <div onClick={handleNav} className="block md:hidden">
-                        {nav ? <AiOutlineClose className="text-white" size={20} /> : <AiOutlineMenu className="text-white" size={20} />}
+                        {nav ?
+                            <AiOutlineClose className="text-white" size={20} />
+                            :
+                            <AiOutlineMenu className="text-white" size={20} />}
                     </div>
 
                     <ul
                         className={
-                            nav
-                                ? "fixed left-2 top-0 w-[60%] h-full border-r border-r-gray-900 bg-[#000300] ease-in-out duration-500"
-                                : "ease-in-out duration-500 fixed left-[-100%]"
+                            nav ?
+                                "fixed left-2 top-0 w-[60%] h-full border-r border-r-gray-900 bg-[#000300] ease-in-out          duration-500"
+                                :
+                                "ease-in-out duration-500 fixed left-[-100%]"
                         }
                     >
                         <h1 className='text-2xl py-3 text-white'>Content-Management</h1>
